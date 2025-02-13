@@ -18,31 +18,25 @@ const Register = () => {
         ...error,
         name: "Name must be more than 5 character long!!",
       });
-      // console.log(error);
 
       return;
     }
     const email = form.get("email");
     const photo = form.get("photo");
     const password = form.get("password");
-    console.log({ name, email, photo, password });
 
     createNewUser(email, password)
       .then((result) => {
         const user = result.user;
         setUser(user);
-        // console.log(user);
+
         updatedUserProfile({ displayName: name, photoURL: photo })
           .then(() => {
             navigate("/");
           })
-          .catch((err) => {
-            // console.log(err);
-          });
+          .catch(() => {});
       })
-      .catch((error) => {
-        // console.log("ERROR", error.message);
-      });
+      .catch(() => {});
   };
   return (
     <div className="min-h-screen flex justify-center items-center">
