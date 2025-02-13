@@ -18,7 +18,7 @@ const Register = () => {
         ...error,
         name: "Name must be more than 5 character long!!",
       });
-      console.log(error);
+      // console.log(error);
 
       return;
     }
@@ -37,11 +37,11 @@ const Register = () => {
             navigate("/");
           })
           .catch((err) => {
-            console.log(err);
+            // console.log(err);
           });
       })
       .catch((error) => {
-        console.log("ERROR", error.message);
+        // console.log("ERROR", error.message);
       });
   };
   return (
