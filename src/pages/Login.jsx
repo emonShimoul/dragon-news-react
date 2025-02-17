@@ -10,7 +10,6 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // get form data
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;

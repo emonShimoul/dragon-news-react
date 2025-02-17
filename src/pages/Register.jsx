@@ -10,7 +10,6 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // get form data
     const form = new FormData(e.target);
     const name = form.get("name");
     if (name.length < 5) {
