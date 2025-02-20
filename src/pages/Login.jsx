@@ -18,7 +18,6 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         setUser(user);
-        // console.log(user);
 
         navigate(location?.state ? location.state : "/");
       })
